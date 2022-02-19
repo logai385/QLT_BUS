@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 export default class Navbar extends Component {
   render() {
@@ -10,40 +11,32 @@ export default class Navbar extends Component {
             <a
               className="nav-link"
               data-widget="pushmenu"
-              href="#"
+              href="/"
               role="button"
             >
               <i className="fas fa-bars" />
             </a>
           </li>
           <li className="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" className="nav-link">
-              Home
-            </a>
-          </li>
-          <li className="nav-item d-none d-sm-inline-block">
-            <a href="#" className="nav-link">
-              Contact
-            </a>
+            <NavLink className="nav-link" to="/dashboard">
+              Dashboard
+            </NavLink>
           </li>
         </ul>
         {/* Right navbar links */}
         <ul className="navbar-nav ml-auto">
-      
-         
           {/* Notifications Dropdown Menu */}
-   
+
           <li className="nav-item">
             <a
               className="nav-link"
               data-widget="fullscreen"
-              href="#"
+              href="/"
               role="button"
             >
               <i className="fas fa-expand-arrows-alt" />
             </a>
           </li>
-          
         </ul>
       </nav>
     );
